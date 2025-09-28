@@ -1,0 +1,198 @@
+<<<<< this file contains your perchance lists first, and your HTML code underneath it >>>>>
+
+
+
+// Note: Text that comes after "//" is ignored, which allows
+// you to write notes - like the one you're reading now!
+
+title
+  Physics Final project
+
+output
+  {This|That} [animal] is so [adjective]!^0.2
+  I wish I could [verb] that [animal].^0.5
+  Aren't [animal.pluralForm] just so [adjective]?^0.15
+  There must be at least {1-10} [animal]{s} [location]!^0.1
+  THE [animal.upperCase]! It's eating the {import:common-noun}!^0.04
+  {A} [animal] is a bit like {a} {import:common-noun}.^0.01 // {A} and {a} will automatically choose "a" and "an" as appropriate
+  <strong>Kinematics</strong> is the study of motion
+  <strong>Distance (m)</strong> is how far you've traveled
+  <strong>Displacement (m)</strong> is how far you are from your starting point and which dirction
+  A <strong>Scalar quantity</strong> is a quantity that is described by <em>only magnitude</em>
+  A <strong>Vector quantity</strong> is a quantity that is described by <em>magnitude and direction</em>
+  <strong>Time (t)</strong> is what humans made to keep track of stuff
+  <strong>Speed (m/s)</strong> is how fast you are moving
+  <strong>Velocity (m/s)</strong> is your change in velocity over your change in time
+  
+
+
+
+  
+animal
+  pig
+  cow
+  chicken
+  zebra
+  crayfish
+  jellyfish^0.5  // this item is HALF as likely as the others
+  worm^2         // this item is TWICE as likely as the others
+	
+adjective
+  small
+  big
+  cute
+  sneaky
+  unusual
+  helpful
+  mean
+	
+verb
+  pat
+  befriend
+  help
+	
+location
+  on {the|this|that} island
+  in {the|this|that} valley
+  {around|in} here
+  over there
+  under this {thing^2|thingie}
+	
+
+
+// Tips:
+//  - Highlight multiple lines and press Tab or Shift+Tab to indent and un-indent them all an once
+//  - You can change the URL of your generator by clicking the "settings" button in the top-right
+//  - You can use the sparkle button in the lower-right of the screen to ask the AI to adjust the visual design of your generator.
+//  - Add background images, fonts, and other stuff with plugins:  perchance.org/plugins
+//  - Here are some generators you might like to import:  perchance.org/useful-generators
+//  - Read this page after reading the tutorial:  perchance.org/examples
+//  - There's a gear button in the top-left which you can use to make the lines wrap around when they reach the edge of the screen, and to change the font size. Also, if you add   $output=[this.joinItems("<br>")]   as the first or last item in your list, then writing [yourListName] will magically output all of the items joined together with <br> (which means "line break" in HTML - i.e. a line separator), rather than outputting a random item from the "yourListName" list.
+//  - Ask our friendly community members if you need help:  lemmy.world/c/perchance
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Learn 'HTML' here:  https://www.khanacademy.org/computing/computer-programming/html-css    -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset=utf-8>
+    <title>kjlaeffk</title>
+  </head>
+  <body>
+    <br>
+    <h1>Physics Final Project</h1>
+    <p style="margin:1em auto; padding:0 1em; max-width:700px;">[output]</p>
+    <button onclick="startstopupdates(this)">start</button>
+    <h2>Kinematics</h2>
+    <button onclick="ShowKterms(event)">Show terms</button>
+    <ul hidden id="KinematicsList">
+      <li>Time</li>
+      <li>Scalar</li>
+      <li>Vector</li>
+      <li>Magnitude</li>
+      <li>Direction</li>
+      <li>Speed</li>
+      <li>velocity</li>
+      <li>Acceleration</li>
+      <li>Kinematic Equations</li>
+      <li>Vector Addition</li>
+    </ul>
+      
+  </body>
+
+<!-- Changes text and background depending on dark or light mode -->
+<style> html { color-scheme: light dark; }</style>
+<style> [hidden] {
+          display: none;
+        } </style>
+  <script> 
+    let something = true;
+    function startupdates() {
+      something=true
+    }
+
+    function stopupdates() {
+      something=false
+    }
+    
+    function wait(ms){
+      return new Promise(resolve => setTimeout(resolve, ms));
+    }
+    
+    async function autoupdate() {
+      while (something) {
+        update()
+        await wait(1000);
+      }
+    }
+
+    async function startstopupdates(button) {
+
+      if (something) {
+        startupdates();
+        autoupdate();
+        button.textContent = ("stop");
+        
+      }else {
+        stopupdates();
+        button.textContent = ("start");     
+      }
+    }
+    function ShowKterms(event){
+    const Kterms = document.getElementById("KinematicsList");
+    const button1 = event.target;
+
+    if (Kterms.hasAttribute("hidden")) {
+        Kterms.removeAttribute("hidden");
+        button1.textContent = "Hide terms";
+      } else {
+        Kterms.setAttribute("hidden", "");
+        button1.textContent = "Show terms";
+      }
+    }
+    
+  </script>
+  
+  
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
