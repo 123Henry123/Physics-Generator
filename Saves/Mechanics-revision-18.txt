@@ -1,0 +1,107 @@
+<<<<< this file contains your perchance lists first, and your HTML code underneath it >>>>>
+
+
+
+// Note: Text that comes after "//" is ignored, which allows
+// you to write notes - like the one you're reading now!
+
+title
+  Mechanics
+
+	
+
+// Tips:
+//  - Highlight multiple lines and press Tab or Shift+Tab to indent and un-indent them all an once
+//  - You can change the URL of your generator by clicking the "settings" button in the top-right
+//  - You can use the sparkle button in the lower-right of the screen to ask the AI to adjust the visual design of your generator.
+//  - Add background images, fonts, and other stuff with plugins:  perchance.org/plugins
+//  - Here are some generators you might like to import:  perchance.org/useful-generators
+//  - Read this page after reading the tutorial:  perchance.org/examples
+//  - There's a gear button in the top-left which you can use to make the lines wrap around when they reach the edge of the screen, and to change the font size. Also, if you add   $output=[this.joinItems("<br>")]   as the first or last item in your list, then writing [yourListName] will magically output all of the items joined together with <br> (which means "line break" in HTML - i.e. a line separator), rather than outputting a random item from the "yourListName" list.
+//  - Ask our friendly community members if you need help:  lemmy.world/c/perchance
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Learn 'HTML' here:  https://www.khanacademy.org/computing/computer-programming/html-css    -->
+<html>
+  <head></head>
+  <body>
+<h1>[title]</h1>
+    <h3>Kinematics</h3>
+    <a href="https://perchance.org/physics-project">back</a>
+    <h4>distance and displacement</h4>
+    <iframe height="767" width="512" controls
+      src="https://www.youtube.com/embed/rTlYpcek8qA"
+      frameborder=0
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+    <h4>Acceleration, velocity, and speed</h4>
+    <p>A prince is placed onto the board. There is a 1 second delay before it starts moving at a speed of <br>
+    xtiles/s before accelerating to a speed of ytiles/s a while later it encounters a hog rider and instatnly <br>
+    comes to a halt to attack it. The hog rider survives on 1 hp and runs past the prince causing the prince to <br>
+    chase it in the opposite direction. The prince starts slow but accelerates to an increased speed before the hog <br>
+    rider meets the terrible fate of being unalived by a tower. Following that the prince nimbly makes <br>
+    a 180° turn without losing speed. The prince then continues to move at a constant speed until it collides with <br>
+    an enemy mortar bring it to a complete stop.<br><br>
+      
+      With the given information answer the following questions:<br><br>
+      
+    a) what was the average velocity of the prince (in tiles/s)? Round to the nearest whole number<br>
+    b) how many times did the prince accelerate (in the positive or negative direction)?</p>
+    
+    
+    <h3>Dynamics</h3>
+    <h3>Momentum</h3>
+      
+    </h3><p style="margin:1em auto; padding:0 1em; max-width:700px;">[output]</p>
+<button onclick="update()">randomize</button>
+  </body>
+
+<!-- The line below makes it so if your device is in dark mode, then the default text color is switched to white, and the default background color is switch to black. -->
+<style> html { color-scheme: light dark; } </style>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
